@@ -1,61 +1,169 @@
-@charset "UTF-8";
-
-/* PARA CELULAR */ 
-* {
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+:root {
+    --branco-principal: #e6e6e6;
+    --cinza-secundario: #9c9c9c;
+    --cor-de-fundo: #141414;
+    --branco-terciario: #e6e6e6;
 }
-
-body {
-    background-color: rgb(17, 17, 17);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-h1 {
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    
+}
+.celular__cabeca{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+.celular__edit{
+    width: 30px;
+    height: 30px;
+    margin-left: 65px;
+}
+.celular__logo{
+    margin-left: 85px;
+}
+.principal-entrada{
+    display: grid;
+    place-items: center;
+}
+.titulo-entrada{
+    margin-top: 2em;
+    font-size: 50px;
     text-align: center;
-    position: relative;
-    top: 150px;
-    color: white;
 }
+.imagem-namorada{
+    width: 115px;
+    border-radius: 10px;
+    margin-top: 2em;
 
-div#Sarinha {
-    background-image: url(minhamuiee.jpg);
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 8px;
-    background-color: white;
-    width: 90px;
-    height: 100px;
- 
-    transition: transform 0.3s ease;
 }
-
-div#Sarinha:hover {
-    transform: translate(-50%, -60%);
+.gerenciar-perfil{
+    border: 2px solid var(--cinza-secundario);
+    color: var(--cinza-secundario);
+    padding: 0.6em 2em;
+    margin-top: 30px;
 }
-
-p {
-    color: rgb(105, 105, 105);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 300%);
+.gerenciar-perfil h1{
+    font-size: 20px;
 }
-
-div#perfis {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 350%);
-    padding: 5px;
-    border: 1px solid rgb(105, 105, 105);
-    background-color: black;
-    color: rgb(105, 105, 105);
-    height: 20px;
+.nome-da-gata{
+    color: var(--cinza-secundario);
+    font-weight: 500;
+    margin-top: 0.5em;
+    text-align: center;
+}
+/* PAGINA PRINCIPAL____________________________________________ */
+.cabecalho-netflix{
+    position: fixed;
+    width: 100%;
+    padding: 20px 21px;
+    background: linear-gradient(to bottom, black, rgba(20, 20, 20, 0.2));
+}
+.lista-estilos-de-filme{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.itens-lista-filme{
+    margin: 0 8%;
+}
+.titulo-filme1{
+    width: 75%;
+    margin: 160px 0 0 10px;
+}
+.apresentacao-principal{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.267)),
+    url(imagens/foto020.jpg);
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0px -20px 9px 0px #0000006b;
+    padding-bottom: 15%;
+}
+.container-texto-romance{
+    font-size: 18px;
+    margin: 20px 0 30px 10px;
+    color: var(--branco-principal);
+}
+.container_botao{
+    margin: 120px 0 20px 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.botao_link_play{
+    background-color: var(--branco-terciario);
+    color: var(--cor-de-fundo);
+    padding: 8px 1.5em;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    border-radius: 3px;
     width: 150px;
+}
+.paragrafo-assistir{
+    font-weight: 700;
+}
+.imagem-play{
+    width: 30px;
+}
+.botao__assistir{
+    padding:8px 15px;
+    background-color: rgba(156, 156, 156, 0.6);
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+.container-filmes{
+    padding: 20px 15px;
+}
+.assistir-novamente{
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+.imagem_filme{
+    width: 200px;
+    object-fit: cover;
+}
+.container_video{
+    margin-right: 15px;
+}
+.container_lista{
+    list-style: none;
+    display: flex;
+    margin-top: -20px;
+    overflow-x: scroll;
+    align-items: center;
+}
+.inicio-link{
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+/*filme_______________________________________________/*/
+.filme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-filme{
+    width: 250px;
+    margin-top: 90px;
+    border-radius: 3px;
+}
+.titulo-continuacao{
+    font-weight: 700;
     text-align: center;
-    margin: 5px white;
+    font-size: 1.5em;
+    padding: 20px;
+    margin-top: 120px;
 }
